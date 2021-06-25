@@ -32,7 +32,7 @@ public class Tampilan extends javax.swing.JFrame {
      */
     public Tampilan() {
         initComponents();
-        Object[] header = {"", "No", "Nama", "Type", "Owner"};
+        Object[] header = {"", "No", "Nama", "File Type"};
         model = new DefaultTableModel(header, 0);
         jTable2.setModel(model);
         jTable2.getColumnModel().getColumn(0).setMinWidth(0);
