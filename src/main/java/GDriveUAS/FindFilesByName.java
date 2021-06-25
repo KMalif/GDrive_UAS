@@ -7,19 +7,14 @@ package GDriveUAS;
 
 /**
  *
- * @author ACER
+ * @author KMalif
  */
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
- 
-import GDriveUAS.GoogleDriveUtils;
- 
 import com.google.api.services.drive.Drive;
 import com.google.api.services.drive.model.File;
 import com.google.api.services.drive.model.FileList;
-import java.io.ByteArrayOutputStream;
-import java.io.OutputStream;
  
 public class FindFilesByName {
  

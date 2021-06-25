@@ -7,15 +7,12 @@ package GDriveUAS;
 
 /**
  *
- * @author ACER
+ * @author KMalif
  */
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Arrays;
 import java.util.List;
- 
-import GDriveUAS.GoogleDriveUtils;
- 
 import com.google.api.client.http.AbstractInputStreamContent;
 import com.google.api.client.http.ByteArrayContent;
 import com.google.api.client.http.FileContent;
@@ -26,7 +23,7 @@ import com.google.api.services.drive.model.File;
 public class CreateGoogleFile {
  
     // PRIVATE!
-    private static File _createGoogleFile(String googleFolderIdParent, String contentType, //
+   private static File _createGoogleFile(String googleFolderIdParent, String contentType, //
             String customFileName, AbstractInputStreamContent uploadStreamContent) throws IOException {
  
         File fileMetadata = new File();
@@ -74,7 +71,7 @@ public class CreateGoogleFile {
  
     public static void main(String[] args) throws IOException {
  
-        java.io.File uploadFile = new java.io.File("/home/tran/Downloads/test.txt");
+        java.io.File uploadFile = new java.io.File("/home/Documents/PLUGIN 8 Week.txt");
  
         // Create Google File:
  
@@ -86,5 +83,4 @@ public class CreateGoogleFile {
  
         System.out.println("Done!");
     }
-     
 }
