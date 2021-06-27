@@ -32,7 +32,7 @@ public class Tampilan extends javax.swing.JFrame {
      */
     public Tampilan() {
         initComponents();
-        Object[] header = {"", "No", "Nama", "File Type"};
+        Object[] header = {"", "No", "File Name", "File Type"};
         model = new DefaultTableModel(header, 0);
         jTable2.setModel(model);
         jTable2.getColumnModel().getColumn(0).setMinWidth(0);
@@ -144,7 +144,7 @@ public class Tampilan extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(18, 10, 0, 0);
         getContentPane().add(jButton2, gridBagConstraints);
 
-        jLabel1.setText("Cari :");
+        jLabel1.setText("Search");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 0;
@@ -344,8 +344,10 @@ public class Tampilan extends javax.swing.JFrame {
                 String Ukuran = String.valueOf(file.getSize());
                 Boolean Owner = file.getOwnedByMe();
                 No++;
-                Object[] data = {id, No, Nama, Type, Ukuran, Owner};
+                Object[] data = {id, No, Nama, Type};
                 model.addRow(data);
+                
+                System.out.println(Type);
             }
         } catch (IOException e) {
         }
@@ -361,10 +363,8 @@ public class Tampilan extends javax.swing.JFrame {
                 String id = folder.getId();
                 String Nama = folder.getName();
                 String Type = folder.getMimeType();
-                String Ukuran = String.valueOf(folder.getSize());
-                Boolean Owner = folder.getOwnedByMe();
                 No++;
-                Object[] data = {id, No, Nama, Type, Ukuran, Owner};
+                Object[] data = {id, No, Nama, Type};
                 model.addRow(data);
             }
         } catch (IOException ex) {
